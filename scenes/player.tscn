@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c65hx1tw1a3u6"]
+
+[ext_resource type="Texture2D" uid="uid://dyhrodkbr80d4" path="res://icon.svg" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://befggemvugekf" path="res://scenes/player.gd" id="1_g2els"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqjtg"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_lbhrr"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1397630744]
+script = ExtResource("1_g2els")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1774434580]
+texture = ExtResource("1_3vyb7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=178767820]
+shape = SubResource("RectangleShape2D_yqjtg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2135708059]
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=207279373]
+tree_root = SubResource("AnimationNodeBlendTree_lbhrr")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=867346354]
