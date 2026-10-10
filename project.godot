@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Heart of Melody"
+run/main_scene="uid://c65hx1tw1a3u6"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
